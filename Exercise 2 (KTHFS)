@@ -16,10 +16,10 @@ fig, ax = plt.subplots()
 line, = plt.plot(t, f(t, init_amplitude, init_frequency), lw=2)
 ax.set_xlabel('Time [s]')
 
-# adjust the main plot to make room for the sliders
+# make room for the sliders by adjusting the main plot
 plt.subplots_adjust(left=0.30, bottom=0.25)
 
-# make a horizontal slider to control the frequency
+# horizontal slider to control the frequency
 axfreq = plt.axes([0.25, 0.1, 0.65, 0.03])
 freq_slider = Slider(
     ax = axfreq,
@@ -29,7 +29,7 @@ freq_slider = Slider(
     valinit = init_frequency,
 )
 
-# make a vertically oriented slider to control the amplitude
+# vertically slider to control the amplitude
 axamp = plt.axes([0.1, 0.25, 0.225, 0.63])
 amp_slider = Slider(
     ax = axamp,
@@ -46,11 +46,11 @@ def update(val):
     fig.canvas.draw_idle()
 
 
-# register the update function with each slider
+# register the updated function with each slider
 freq_slider.on_changed(update)
 amp_slider.on_changed(update)
 
-# create a 'matplotlib.widgets.Button' to reset the sliders to initial values.
+# create a button to reset the sliders to initial values.
 resetax = plt.axes([0.8, 0.025, 0.025, 0.04])
 button = Button(resetax, 'Reset', hovercolor ='0.975')
 
