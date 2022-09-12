@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.widgets import Slider, Button
+%matplotlib notebook
 
 def f(t, amplitude, frequency):
     return amplitude * np.sin(2 * np.pi * frequency * t)
