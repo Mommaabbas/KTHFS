@@ -25,7 +25,7 @@ freq_slider = Slider(
     ax = axfreq,
     label = 'Frequency',
     valmin = 0.1,
-    valmax = 30,
+    valmax = 20,
     valinit = init_frequency,
 )
 
