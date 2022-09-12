@@ -52,7 +52,7 @@ freq_slider.on_changed(update)
 amp_slider.on_changed(update)
 
 # create a button to reset the sliders to initial values.
-resetax = plt.axes([0.8, 0.025, 0.025, 0.04])
+resetax = plt.axes([0.8, 0.025, 0.065, 0.04])
 button = Button(resetax, 'Reset', hovercolor ='0.975')
 
 def reset(event):
