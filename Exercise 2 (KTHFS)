@@ -16,6 +16,7 @@ init_frequency = 1
 fig, ax = plt.subplots()
 line, = plt.plot(t, f(t, init_amplitude, init_frequency), lw=2)
 ax.set_xlabel('Time [s]')
+ax.set_ylabel('h(t)')
 
 # make room for the sliders by adjusting the main plot
 plt.subplots_adjust(left=0.25, bottom=0.25)
@@ -31,7 +32,7 @@ freq_slider = Slider(
 )
 
 # vertically slider to control the amplitude
-axamp = plt.axes([0.15, 0.25, 0.025, 0.63])
+axamp = plt.axes([0.10, 0.25, 0.025, 0.63])
 amp_slider = Slider(
     ax = axamp,
     label = "Amplitude",
