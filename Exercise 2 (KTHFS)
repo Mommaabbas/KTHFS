@@ -4,7 +4,7 @@ from matplotlib.widgets import Slider, Button
 %matplotlib notebook
 
 def f(t, amplitude, frequency):
-    return amplitude * np.sin(2 * np.pi * frequency * t)
+    return 3 * np.pi * np.exp(amplitude * np.sin(2 * np.pi * frequency * t))
 
 
 t = np.linspace(0, 1, 1000)
@@ -18,7 +18,7 @@ line, = plt.plot(t, f(t, init_amplitude, init_frequency), lw=2)
 ax.set_xlabel('Time [s]')
 
 # make room for the sliders by adjusting the main plot
-plt.subplots_adjust(left=0.30, bottom=0.25)
+plt.subplots_adjust(left=0.25, bottom=0.25)
 
 # horizontal slider to control the frequency
 axfreq = plt.axes([0.25, 0.1, 0.65, 0.03])
@@ -31,7 +31,7 @@ freq_slider = Slider(
 )
 
 # vertically slider to control the amplitude
-axamp = plt.axes([0.22, 0.25, 0.025, 0.63])
+axamp = plt.axes([0.15, 0.25, 0.025, 0.63])
 amp_slider = Slider(
     ax = axamp,
     label = "Amplitude",
